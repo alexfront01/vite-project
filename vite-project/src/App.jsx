@@ -4,7 +4,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  console.log(currentYear);
+
 
   return (
     <>
@@ -28,8 +32,11 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+	  <div>
+		<h2>Сегодня {currentYear} год</h2>
+	  </div>
     </>
   )
-}
+};
 
 export default App
