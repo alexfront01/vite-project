@@ -4,11 +4,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+	// императивный стиль
   const [count, setCount] = useState(0);
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
   console.log(currentYear);
 
+	// декларативный  стиль
   return (
 	React.createElement(React.Fragment,
 		null,
@@ -20,7 +22,7 @@ function App() {
 			),
 		React.createElement('h1', null, 'Vite + React'),
 		React.createElement('div', {className: 'card'},
-			React.createElement('button', {onClick: ()=> setCount((count) => count + 1)}, 'count is' + count),
+			React.createElement('button', {onClick: ()=> setCount((count) => count + 1)}, `count is' ${count}`),
 			React.createElement('p', null, 'Edit', React.createElement('code', null, 'src/App.jsx'), 'and save to test HMR')
 		),
 		React.createElement('p', {className: 'read-the-docs'}, 'Click on the Vite and React logos to learn more'),
